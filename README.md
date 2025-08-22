@@ -31,7 +31,7 @@ weather-app/
 ├─ .gitignore
 └─ README.md
 
-text
+
 
 ---
 
@@ -50,18 +50,18 @@ text
 git clone https://github.com/<your-username>/<repo>.git
 cd <repo>
 
-text
+ 
 
 2. **Install dependencies**
 npm install
 
-text
+ 
 
 3. **Set up environment variable**
 Create a `.env.local` file (git-ignored):
 WEATHER_API_KEY=your_real_weatherapi_key
 
-text
+ 
 
 4. **Run locally**
 macOS/Linux
@@ -72,7 +72,7 @@ Windows PowerShell
 $env:WEATHER_API_KEY="your_real_key_here"
 node server.js
 
-text
+ 
 
 Open in browser:  
 👉 http://localhost:3000/index.html  
@@ -80,7 +80,7 @@ Open in browser:
 Or run with **Vercel CLI**:
 vercel dev
 
-text
+ 
 
 ---
 
@@ -91,17 +91,17 @@ text
 3. In **Project Settings → Environment Variables**:  
 WEATHER_API_KEY=your_real_weatherapi_key
 
-text
+ 
 4. Deploy the app.  
 5. Your app will be live:  
 https://your-app-name.vercel.app/
 
-text
+ 
 
 ✅ Example API test:  
 curl "https://your-app-name.vercel.app/api/weather?q=London&days=1"
 
-text
+ 
 
 ---
 
@@ -109,7 +109,7 @@ text
 Responses are cached to prevent hitting API rate limits:  
 Cache-Control: s-maxage=60, stale-while-revalidate=120
 
-text
+ 
 - ⏳ `s-maxage=60` → cache for 60 seconds in Vercel’s CDN  
 - 🔄 `stale-while-revalidate=120` → serves cached data while refreshing  
 
@@ -126,7 +126,7 @@ You can adjust caching in `api/weather.js`.
 Debug locally with:
 curl "http://localhost:3000/api/weather?q=London&days=1"
 
-text
+ 
 
 ---
 
