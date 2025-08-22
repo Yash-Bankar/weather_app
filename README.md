@@ -19,8 +19,7 @@ A simple **weather web app** that shows current weather, forecasts, alerts, and 
 
 ## 📸 Screenshot  
 
-![Weather App Screenshot](./public/screenshot.png)  
-*(Dark UI with weather details, forecast chart, and map marker)*  
+![Weather App Screenshot](./public/screenshot.png)    
 
 ---
 
