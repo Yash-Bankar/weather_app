@@ -2,7 +2,7 @@
 
 🔗 **Live Demo:** [Weather App on Vercel](https://weather-app-cyan-zeta-65.vercel.app/)  
 
-A simple **weather web app** that shows current weather, forecasts, and alerts using **WeatherAPI.com**, deployed securely on **Vercel** with API key protection.  
+A simple **weather web app** that shows current weather, forecasts, alerts, and an interactive **map view** using **WeatherAPI.com**, deployed securely on **Vercel** with API key protection.  
 
 ---
 
@@ -11,9 +11,16 @@ A simple **weather web app** that shows current weather, forecasts, and alerts u
 - ⏰ Hourly forecast (graph)  
 - 📅 8-day forecast  
 - ⚠️ Weather alerts (if available)  
-- 🗺️ Location map with marker  
-- 🌙 Dark theme UI for a modern look  
+- 🗺️ Interactive location map with marker (city searched shown on map)  
+- 🌙 Dark theme UI for modern look  
 - 🔒 Secure serverless proxy (API key hidden in backend)  
+
+---
+
+## 📸 Screenshot  
+
+![Weather App Screenshot](./public/screenshot.png)  
+*(Dark UI with weather details, forecast chart, and map marker)*  
 
 ---
 
@@ -23,7 +30,8 @@ weather-app/
 ├─ api/
 │  └─ weather.js           # Vercel serverless function (proxy to WeatherAPI)
 ├─ public/
-│  └─ index.html           # Main frontend (dark theme)
+│  ├─ index.html           # Main frontend (dark theme)
+│  └─ screenshot.png       # App preview image
 ├─ server.js               # Optional local Express server for dev
 ├─ package.json
 ├─ package-lock.json
@@ -37,8 +45,8 @@ weather-app/
 1. User searches for a city.  
 2. Frontend sends request → `/api/weather?q=City&days=8`.  
 3. `api/weather.js` fetches data from **WeatherAPI** using the secret key stored in **Vercel environment variables**.  
-4. JSON response is sent back to the frontend.  
-5. UI updates with charts, forecasts, and alerts.  
+4. JSON response is sent back to frontend.  
+5. UI updates with **charts, forecasts, alerts, and map location marker**.  
 
 ---
 
@@ -94,6 +102,11 @@ Or run with Vercel CLI:
    ```
    https://your-project-name.vercel.app/
    ```
+
+✅ Test API endpoint directly:
+```bash
+curl "https://your-project-name.vercel.app/api/weather?q=London&days=1"
+```
 
 ---
 
